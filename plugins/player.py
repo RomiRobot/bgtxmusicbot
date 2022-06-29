@@ -101,7 +101,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text(
         (190, 670),
-        f"Powered By: Bikash & Aditya Halder (@BikashHalder @AdityaHalder)",
+        f"Powered By: Romeo ()",
         (255, 255, 255),
         font=font,
     )
@@ -111,7 +111,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
 @Client.on_message(
-    commandpro(["/play", ".play", "bgt", "!play", "play", "@", "#", "$"])
+    commandpro(["/play", ".play", "Romi, "play", "@", "#", "$"])
     & filters.group
     & ~filters.edited
     & ~filters.forwarded
@@ -129,7 +129,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Bikash_Player"
+        user.first_name = "Romi_Robot"
     usar = user
     wew = usar.id
     try:
@@ -141,24 +141,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "**💥 𝐀𝐭🤞𝐅𝐢𝐫𝐬𝐭 🥀 𝐌𝐚𝐤𝐞 ♥️ 𝐌𝐞 ⭐ 𝐀𝐝𝐦𝐢𝐧 😎 ...**")
+                        "**• Aᴛ Fɪʀsᴛ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ •...**")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "** 😎 𝐈🤞𝐚𝐦 🥀 𝐑𝐞𝐚𝐝𝐲 ♥️ 𝐓𝐨 ⭐ 𝐏𝐥𝐚𝐲 😎 ... 𝐔𝐬𝐞 📢 /play, .play, bgt, !play, play, @, #, $ **")
+                        message.chat.id, "** • I Aᴍ Rᴇᴀᴅʏ Tᴏ Pʟᴀʏ ... Usᴇ • /play, .play, play, @, #, $ **")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"**🥀 𝐏𝐥𝐞𝐚𝐬𝐞 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🌺 𝐀𝐝𝐝 𝐁𝐠𝐭 [𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭](t.me/{ASSISTANT_USERNAME}) 🎸 𝐢𝐧 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩 ♥️ 𝐎𝐫 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐓𝐨 [𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 ](https://t.me/{OWNER_USERNAME}) ✨ **")
+                        f"**• Pʟᴇᴀsᴇ Mᴀɴᴜᴀʟʟʏ Aᴅᴅ Rᴏᴍɪ [Assɪsᴛᴀɴᴛ](t.me/{ASSISTANT_USERNAME}) Iɴ Tʜɪs Gʀᴏᴜᴘ Oʀ Cᴀɴᴛᴀᴄᴛ Tᴏ [Bᴏᴛ Oᴡɴᴇʀ ](https://t.me/{OWNER_USERNAME}) ✨ **")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"**🥀 𝐏𝐥𝐞𝐚𝐬𝐞 𝐌𝐚𝐧𝐮𝐚𝐥𝐥𝐲 🌺 𝐀𝐝𝐝 𝐁𝐠𝐭 [𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭](t.me/{ASSISTANT_USERNAME}) 🎸 𝐢𝐧 𝐓𝐡𝐢𝐬 𝐆𝐫𝐨𝐮𝐩 ♥️ 𝐎𝐫 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐓𝐨 [𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 ](https://t.me/{OWNER_USERNAME}) ✨ **")
+            f"**• Pʟᴇᴀsᴇ Mᴀɴᴜᴀʟʟʏ Aᴅᴅ Rᴏᴍɪ [Assɪsᴛᴀɴᴛ](t.me/{ASSISTANT_USERNAME}) Iɴ Tʜɪs Gʀᴏᴜᴘ Oʀ Cᴀɴᴛᴀᴄᴛ Tᴏ [Bᴏᴛ Oᴡɴᴇʀ ](https://t.me/{OWNER_USERNAME}) ✨ **")
         return
     
     audio = (
@@ -171,12 +171,12 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**💥 𝐏𝐥𝐚𝐲 🔊 𝐌𝐮𝐬𝐢𝐜 💿 𝐋𝐞𝐬𝐬 ⚡️\n🤟 𝐓𝐡𝐚𝐧⚡️ {DURATION_LIMIT} 💞 𝐌𝐢𝐧𝐮𝐭𝐞 ...**"
+                f"**• Pʟᴀʏ Mᴜsɪᴄ Lᴇss \n•Tʜᴀɴ {DURATION_LIMIT} Mɪɴᴜᴛᴇs • ...**"
             )
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://te.legra.ph/file/99d0261f0aa5512ad6753.jpg"
+        thumb_name = "https://telegra.ph/file/64dcf7da559b7021edbc3.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -185,22 +185,22 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="🥀 ♕︎𝐎𝐰𝐧𝐞𝐫♕︎ 🕊️",
+                            text="• Oᴡɴᴇʀ •",
                             url=f"https://t.me/{OWNER_USERNAME}")
                ],
                [
                     InlineKeyboardButton(
-                            text="📡 𝐔𝐩𝐝𝐚𝐭𝐞𝐬",
+                            text="• Uᴘᴅᴀᴛᴇs •",
                             url=f"{UPDATES_CHANNEL}"),
                             
                     InlineKeyboardButton(
-                            text="𝐒𝐮𝐩𝐩𝐨𝐫𝐭 💬",
+                            text="• Sᴜᴘᴘᴏʀᴛ •",
                             url=f"{SUPPORT_GROUP}")
                ],
                [
                         InlineKeyboardButton(
-                            text="😎 🇧𝐆𝐓 🌺",
-                            url=f"https://t.me/Bgt_Chat")
+                            text="• Fʀɪᴇɴᴅs Fᴏʀᴇᴠᴇʀ •",
+                            url=f"")
                    
                 ]
             ]

@@ -17,9 +17,9 @@ async def clear_downloads(_, message: Message):
     if ls_dir:
         for file in os.listdir(downloads):
             os.remove(os.path.join(downloads, file))
-        await message.reply_text("✅ **𝑫𝒆𝒍𝒆𝒕𝒆𝒅 𝑨𝒍𝒍 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 𝑭𝒊𝒍𝒆𝒔 ...**")
+        await message.reply_text("✅ **Dᴇʟᴇᴛᴇᴅ Aʟʟ Dᴏᴡɴʟᴏᴀᴅᴇᴅ Fɪʟᴇs ...**")
     else:
-        await message.reply_text("❌ **𝑵𝒐 𝑭𝒊𝒍𝒆𝒔 𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒅 ...**")
+        await message.reply_text("❌ **Fɪʟᴇs Dᴏᴡɴʟᴏᴀᴅᴇᴅ ...**")
 
         
 @Client.on_message(command(["rmr", "clean"]) & ~filters.edited)
@@ -30,9 +30,9 @@ async def clear_raw(_, message: Message):
     if ls_dir:
         for file in os.listdir(raw_files):
             os.remove(os.path.join(raw_files, file))
-        await message.reply_text("✅ **𝑫𝒆𝒍𝒆𝒕𝒆𝒅 𝑨𝒍𝒍 𝑹𝒂𝒘 𝑭𝒊𝒍𝒆𝒔 ...**")
+        await message.reply_text("✅ **Dᴇʟᴇᴛᴇᴅ Aʟʟ Rᴀᴡ Fɪʟᴇs ...**")
     else:
-        await message.reply_text("❌ **𝑵𝒐 𝑹𝒂𝒘 𝑭𝒊𝒍𝒆𝒔 𝒊𝒏 𝑺𝒆𝒓𝒗𝒆𝒓 ...**")
+        await message.reply_text("❌ **Nᴏ Rᴀᴡ Fɪʟᴇs Iɴ Sᴇʀᴠᴇʀ ...**")
 
 
 @Client.on_message(command(["cleanup"]) & ~filters.edited)
@@ -44,6 +44,6 @@ async def cleanup(_, message: Message):
     if ls_dir:
         for dta in os.listdir(pth):
             os.system("rm -rf *.webm *.jpg")
-        await message.reply_text("✅ **𝑪𝒍𝒆𝒂𝒏𝒆𝒅 𝑨𝒍𝒍 𝑱𝒖𝒏𝒌𝒔 𝑻𝒉𝒖𝒎𝒏𝒂𝒊𝒍𝒔 ...**")
+        await message.reply_text("✅ **Cʟᴇᴀɴᴇᴅ Aʟʟ Jᴜɴᴋs Tʜᴜᴍɴᴀɪʟs ...**")
     else:
-        await message.reply_text("✅ **𝑨𝒍𝒓𝒆𝒂𝒅𝒚 𝑪𝒍𝒆𝒂𝒏𝒆𝒅 𝑨𝒍𝒍 𝑱𝒖𝒏𝒌𝒔 ...**")
+        await message.reply_text("✅ **Aʟʀᴇᴀᴅʏ Cʟᴇᴀɴᴇᴅ Aʟʟ Jᴜɴᴋs ...**")

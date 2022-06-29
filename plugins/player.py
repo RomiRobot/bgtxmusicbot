@@ -30,7 +30,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputStream
 from pytgcalls.types.input_stream import InputAudioStream
 
-# 𝑰𝒏𝒕𝒆𝒓𝒏𝒂𝒍 𝑴𝒐𝒅𝒖𝒍𝒆𝒔
+# Iɴᴛᴇʀɴᴀʟ Mᴏᴅᴜʟᴇs
 chat_id = None
 useer = "NaN"
 
@@ -53,7 +53,7 @@ def transcode(filename):
     os.remove(filename)
 
 
-# 𝑪𝒐𝒏𝒗𝒆𝒓𝒕 𝑺𝒆𝒄𝒐𝒏𝒅𝒔 𝑻𝒐 𝒎𝒎:𝒔𝒔
+# Cᴏɴᴠᴇʀᴛ Sᴇᴄᴏɴᴅs Tᴏ ᴍᴍ:ss
 def convert_seconds(seconds):
     seconds = seconds % (24 * 3600)
     seconds %= 3600
@@ -62,13 +62,13 @@ def convert_seconds(seconds):
     return "%02d:%02d" % (minutes, seconds)
 
 
-# 𝑪𝒐𝒏𝒗𝒆𝒓𝒕 𝒉𝒉:𝒎𝒎:𝒔𝒔 𝑻𝒐 𝑺𝒆𝒄𝒐𝒏𝒅𝒔
+# Cᴏɴᴠᴇʀᴛ ʜʜ:ᴍᴍ Tᴏ Sᴇᴄᴏɴᴅs
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-# 𝑪𝒉𝒂𝒏𝒈𝒆 𝑻𝒉𝒖𝒎𝒃𝒏𝒂𝒊𝒍 𝑺𝒊𝒛𝒆
+# Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Sɪᴢᴇ
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
     heightRatio = maxHeight / image.size[1]
@@ -76,7 +76,7 @@ def changeImageSize(maxWidth, maxHeight, image):
     newHeight = int(heightRatio * image.size[1])
     return image.resize((newWidth, newHeight))
 
-# 𝑮𝒆𝒏𝒆𝒓𝒂𝒕𝒆 𝑻𝒉𝒖𝒎𝒃𝒏𝒂𝒊𝒍
+# Gᴇɴᴇʀᴀᴛᴇ Tʜᴜᴍʙɴᴀɪʟ
 async def generate_cover(requested_by, title, views, duration, thumbnail):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
@@ -268,7 +268,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                            text="🥀 ♕︎𝐎𝐰𝐧𝐞𝐫♕︎ 🕊️",
+                            text="• Oᴡɴᴇʀ •",
                             url=f"https://t.me/{OWNER_USERNAME}")
                ],
                [
